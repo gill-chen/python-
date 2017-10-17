@@ -1,0 +1,16 @@
+#!/bin/python3
+
+import sys
+
+
+n, d = map(int, input().split())
+arr = [int(arr_temp) for arr_temp in input().strip().split(' ')]
+
+def rotate(l, d):
+    return l[d:] + l[:d]
+#rotate function splices and concatenates two list into one, it does not modify the original list 
+#collection.deque has a rotate method. it will permanently change the list 
+ans = rotate(arr, d)
+for x in ans:
+    print (x, end =" ")
+    
